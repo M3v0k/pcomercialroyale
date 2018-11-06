@@ -1,0 +1,42 @@
+{% extends 'base/base.html'%}
+
+{% block titulo %}Juegos{% endblock %}
+{% block content %}
+<!-- banner -->
+<div class="sub-banner">
+
+
+</div>
+<!-- banner -->
+<div class="events-w3layouts">
+        {% for carta in carta %}
+    <div class="events-section2-agileinfo">
+    <div class="container">
+        <div class="blog1-w3ls">
+            <div class="col-md-4 blog-image-w3l">
+
+             <a href="single.html"><img src="{{carta.imagen.url}}" alt="Cartas Royale " style="width:200px;height:200px;left;" /></a>
+            </div>
+            <div class="col-md-8 blog-text-w3ls">
+                <a href="single.html">
+              <h1><a href="{% url 'detalle_carta' id=carta.id %}">{{ carta.nombre }}</a></h1>
+
+                  <h4>{{carta.nivel}}</h4>
+                </a>
+                <div class="item_info">
+                        <ul>
+                            <h5><i class="glyphicon glyphicon-user"></i></a></h5>
+                        </ul>
+                 </div>
+                 <p>{{carta.detalle}}</p>
+
+                </br>
+            </br>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+{% endblock %}
