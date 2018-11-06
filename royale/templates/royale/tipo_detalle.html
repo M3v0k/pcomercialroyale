@@ -1,0 +1,14 @@
+{% extends "base/base2.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+            <h3 style="margin:5% 0;"><strong>Nombre: </strong>
+							{{tipo.nombre }}
+						</h3>
+            <h3 style="margin:5% 10;"><strong>Descripción: </strong>
+							{{tipo.detalle|linebreaks}}
+						</h3>
+						<a class="btn btn-default" href=""><span class="glyphicon glyphicon-pencil"></span></a>
+						<a class="btn btn-default" href=""><span class="glyphicon glyphicon-remove"></span></a>
+{% endblock %}

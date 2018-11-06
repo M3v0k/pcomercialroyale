@@ -38,7 +38,7 @@ class Carta(models.Model):
     nombre = models.CharField(max_length=100)
     imagen = models.ImageField(verbose_name="Imagen",upload_to="cartar",null=True,blank=True)
     detalle = models.CharField(max_length=200)
-    nivel = models.ForeignKey(Level,on_delete=models.CASCADE,related_name="keynivel", help_text="Ingrese un numeros entero")
+    nivel = models.ForeignKey(Level,on_delete=models.CASCADE,related_name="keynivel")
     tipos = models.ManyToManyField(Tipo,verbose_name="Tipo",related_name="keytipo")
 
     class Meta:
