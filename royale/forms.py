@@ -15,10 +15,10 @@ class CartaForm(forms.ModelForm):
         ]
         labels = {
             'nombre': 'Nombre',
-            'imagen': 'Image',
-            'detalle': 'Detalle',
+            'imagen': 'Imagen Carta',
+            'detalle': 'Descripción',
             'nivel': 'Nivel',
-            'tipos': 'Tipos de Carta',
+            'tipos': 'Tipo de Carta',
         }
         widgets = {
             'nombre': forms.TextInput(attrs={'class': 'form-control'}),

@@ -2,13 +2,18 @@
 {% load staticfiles %}
 
 {% block content %}
+					<div align="justify">
+						<h2>Descripción Tipo</h2>
+						<div align="justify">
+            <h3 style="margin:2% 0;"><strong>Nombre: </strong>	</h3>
+							<p><strong>{{tipo.nombre }}</strong></p>
 
-            <h3 style="margin:5% 0;"><strong>Nombre: </strong>
-							{{tipo.nombre }}
-						</h3>
-            <h3 style="margin:5% 10;"><strong>Descripción: </strong>
-							{{tipo.detalle|linebreaks}}
-						</h3>
-						<a class="btn btn-default" href=""><span class="glyphicon glyphicon-pencil"></span></a>
-						<a class="btn btn-default" href=""><span class="glyphicon glyphicon-remove"></span></a>
-{% endblock %}
+            <h3 style="margin:2% 0;"><strong>Descripción: </strong></h3>
+						<p><strong>	{{tipo.detalle|linebreaks}}</strong></p>
+
+					</div>
+				</div>
+						<a class="btn btn-default" href="{% url "tipo_editar" id=tipo.id %}"><span class="glyphicon glyphicon-pencil"></span></a>
+						<a class="btn btn-default" href="{% url "tipo_eliminar" id=tipo.id %}"><span class="glyphicon glyphicon-remove"></span></a>
+						<a class="btn btn-default" href="{% url 'tipo_nuevo' %}"><span class="glyphicon glyphicon-plus"></span></a>
+						{% endblock %}

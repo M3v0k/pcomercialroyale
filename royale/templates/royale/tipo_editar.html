@@ -1,23 +1,21 @@
 {% extends "base/base2.html" %}
 {% load staticfiles %}
-
 {% block content %}
 <body>
-
 <div class="col-50">
   <h2>Carta Editar</h2>
     <div class="form-group">
 
 
       <div class="col-sm-offset-0 col-sm-5" align="left">
-        <form method="POST" class="post-form" enctype="multipart/form-data" action="" id="upload-image-form">
+        <form method="POST" class="post-form">
           {% csrf_token %}
         {{formulario.as_table}}
       <button type="submit" class="btn btn-primary btn-lg center-block">Guardar</button>
       </div>
 
       <div class="col-sm-offset-0 col-sm-6" align="right">
-        <img src="{% static 'images/c7.jpg'%}" class="img-circle person" alt="Random Name" width="255" height="255">
+        <img src="{% static 'images/ctipo.png'%}" class="img-circle person" alt="Random Name" width="255" height="255">
       </div>
         </div>
     </div>

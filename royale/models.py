@@ -5,7 +5,7 @@ from django.contrib import admin
 class Tipo(models.Model):
 
     nombre  =   models.CharField(max_length=60, verbose_name="Nombre")
-    detalle  =   models.CharField(max_length=60, verbose_name="Detalle",help_text="Describa el tipo")
+    detalle  =   models.CharField(max_length=200, verbose_name="Detalle",help_text="Describa el tipo")
 
     class Meta:
                 verbose_name="Tipo"

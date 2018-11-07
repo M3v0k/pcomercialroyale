@@ -1,9 +1,28 @@
-{% extends 'base/base.html' %}
+{% extends 'base/base2.html' %}
+{% load static %}
 {% block content %}
+<body>
 
-      <form method="POST" class="post-form" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ formtipo.as_p }}
-      <button type="submit" class="save btn btn-default">Guardar</button>
-      </form>
+<div class="col-50">
+  <h2>Nuevo Tipo</h2>
+    <div class="form-group">
+
+
+      <div class="col-sm-offset-0 col-sm-5" align="left">
+        <form method="POST" class="post-form">
+          {% csrf_token %}
+        {{formtipo.as_table}}
+      <button type="submit" class="btn btn-primary btn-lg center-block">Guardar</button>
+      </div>
+
+      <div class="col-sm-offset-0 col-sm-6" align="right">
+      <img src="{% static 'images/ctipo.png' %}" class="img-circle person" alt="Random Name" width="255" height="255">
+      </div>
+        </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
 {% endblock %}

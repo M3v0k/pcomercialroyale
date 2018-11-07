@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^tipo/(?P<id>[0-9]+)/$', views.detalle_tipo, name='detalle_tipo'),
     url(r'^carta/(?P<id>[0-9]+)/edit/$', views.carta_editar, name='carta_editar'),
     url(r'^carta/(?P<id>[0-9]+)/delete/$', views.carta_eliminar, name='carta_eliminar'),
-
+    url(r'^tipo/(?P<id>[0-9]+)/edit/$', views.tipo_editar, name='tipo_editar'),
+    url(r'^tipo/(?P<id>[0-9]+)/delete/$', views.tipo_eliminar, name='tipo_eliminar'),
     ]

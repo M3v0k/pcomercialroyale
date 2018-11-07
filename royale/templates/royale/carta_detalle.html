@@ -2,7 +2,8 @@
 {% load staticfiles %}
 
 {% block content %}
-
+						<div align="justify">
+						<h2>Detalle Carta</h2>
 						<img src="{{carta.imagen.url}}" height="200" />
             <h3 style="margin:1% 0;"><strong>Nombre: </strong>{{carta.nombre }}</h3>
             <h3 style="margin:1% 0;"><strong>Nivel: </strong>{{carta.nivel}}</h3>
@@ -12,16 +13,18 @@
             {% for ca in carta.tipos.all %}
             <p>{{ca.nombre}}</p>
             {% endfor%}
+					</div>
 
             <div class="w3l_categories">
 							<a class="btn btn-default" href="{% url "carta_editar" id=carta.id %}"><span class="glyphicon glyphicon-pencil"></span></a>
 							<a class="btn btn-default" href="{% url "carta_eliminar" id=carta.id %}"><span class="glyphicon glyphicon-remove"></span></a>
-							<div class="row">
+							<a class="btn btn-default" href="{% url 'carta_nuevo' %}"><span class="glyphicon glyphicon-plus"></span></a>
+						<div class="row">
 
 
 
 
-																<div class="col-sm-6 col-md-3">
+																<div class="col-sm-6 col-md-3" align="left">
                                     <h2>Tipos de cartas </h2>
                                     {% for tipo in tipo %}
                                       <h1><a href="{% url 'detalle_tipo' id=tipo.id %}">{{ tipo.nombre }}</a></hi>
